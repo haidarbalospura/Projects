@@ -1,0 +1,46 @@
+body>*:not(nav) {
+  padding: 50px 100px;
+
+}
+
+h1 {
+  text-align: center;
+  background-color: #0067B0;
+  color: white;
+  padding: 5px;
+  margin: 0px 50px;
+}
+
+#textbox {
+  /* box-sizing: border-box; 
+  width: calc(100% - 100px);
+  margin: 0px 50px; */
+  width: 93.34%;
+  margin-left: 50px;
+  padding-bottom: 10px;
+  border-color: #0067B0;
+  font-size: 15px;
+}
+
+p {
+  text-align: center;
+  background-color: #0067B0;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  margin: 0px 50px;
+}
+
+@media (max-width: 950px){
+  #textbox{
+    width: 81.9%;
+    margin-left: 35px;
+  }
+  h1{
+    margin: 0px 35px;
+  }
+  p{
+    margin: 0px 35px;
+  }
+}

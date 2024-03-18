@@ -1,0 +1,93 @@
+/* body:not(nav){
+  padding: 50px 100px;
+}
+ */
+body>*:not(nav) {
+  padding: 50px 100px;
+}
+
+h1 {
+  text-align: center;
+  padding-top: -50px;
+}
+
+#container {
+  text-align: center;
+  background-color: #1abc9c;
+  padding: 50px;
+  margin: 0px 50px;
+  /* margin-left: 50px;
+  margin-right: 50px; */
+}
+
+.input-div {
+  display: inline-block;
+  margin-left: -40px;
+}
+
+.inp {
+  padding: 5px 10px;
+  margin: 17px;
+  font-size: 30px;
+  font-weight: bold;
+  width: 250px;
+  text-align: center;
+}
+
+.input-lab {
+  font-size: 22px;
+}
+
+.formula {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* 
+h1 {
+  text-align: center;
+}
+
+.converter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.input,
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+}
+
+input {
+  margin-top: 5px;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+}
+
+ */
+/* style.css */
+/* input {
+  margin-top: 5px;
+  padding: 5px;
+  text-align: center;
+  width: 100px;
+}
+ */
+
+@media (max-width: 950px) {
+  #container {
+    margin: 0px;
+    padding-right: 10px;
+  }
+  .formula{
+    padding-right: 20px;
+    margin-top: 30px;
+  }
+}

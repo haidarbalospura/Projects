@@ -1,0 +1,68 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0px;
+}
+
+#header {
+  text-align: center;
+}
+
+#logo {
+  width: 250px;
+  height: auto;
+}
+
+#menu-bar {
+  background-color: cadetblue;
+
+}
+
+
+
+
+#menu-bar a {
+  padding: 12px 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  border: hidden;
+  background-color: cadetblue;
+}
+
+#home {
+  margin: 0px -35px;
+}
+
+#container {
+  text-align: center;
+  padding: 50px 100px;
+}
+
+p {
+  text-align: justify;
+}
+
+#image {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* .sticky #menu-bar {
+  background-color: #333;
+} */
+
+@media screen and (max-width: 750px) {
+  #container {
+    padding: 25px 35px;
+  }
+}

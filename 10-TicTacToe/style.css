@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&family=Roboto&display=swap');
+
+.gameContainer {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: repeat(3, 10vw);
+  grid-template-columns: repeat(3, 10vw);
+  font-family: 'Roboto', sans-serif;
+}
+
+.chooseTurn {
+  text-align: center;
+  margin-right: 450px;
+}
+
+/* .turn-x {
+  border: 2px solid black;
+  padding: 10px 50px;
+} */
+
+.turn-x {
+  align-items: center;
+  appearance: none;
+  padding: 10px 50px;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.turn-x:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.turn-x:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.turn-x:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+.turn-x:active,
+.turn-x:focus {
+  border-bottom: 5px solid #db7b7b;
+  /* Add bottom border when X is active or focused */
+}
+
+.turn-o:active,
+.turn-o:focus {
+  border-bottom: 5px solid #db7b7b;
+  /* Add bottom border when O is active or focused */
+}
+
+
+/* .turn-o {
+  border: 2px solid black;
+  padding: 10px 50px;
+} */
+.turn-o {
+  padding: 10px 50px;
+  align-items: center;
+  appearance: none;
+  background-color: #FCFCFD;
+  border-radius: 4px;
+  border-width: 0;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395A;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow .15s, transform .15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 18px;
+}
+
+.turn-o:focus {
+  box-shadow: #D6D6E7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+}
+
+.turn-o:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+.turn-o:active {
+  box-shadow: #D6D6E7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+
+.box {
+  transition: stroke-dashoffset 0.225s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: stroke-dashoffset 0.225s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 2px solid black;
+  font-size: 8vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* .h-box:hover {
+  background-color: #f2eafa;
+}
+ */
+.x-hover:hover::after {
+  content: "X";
+  opacity: 0.4;
+  background-color: #f2eafa;
+}
+
+.o-hover:hover::after {
+  content: "O";
+  opacity: 0.4;
+  background-color: #f2eafa;
+}
+
+.info {
+  font-size: 22px;
+}
+
+.gameInfo {
+  padding: 0 34px;
+  font-family: 'Baloo Bhaina 2', sans-serif;
+}
+
+.gameInfo h1 {
+  font-size: 2.5rem;
+}
+
+.multiplay {
+  display: flex;
+  margin: 30px;
+  font-size: 30px;
+}
+
+.singleplayer {
+  margin-right: 70px;
+}
+
+.singleplayer-s {
+  border: 3px solid red;
+  text-shadow: 0.15em 0.15em #2F4F4F;
+}
+
+.doubleplayer-d {
+  border: 3px solid red;
+  text-shadow: 0.15em 0.15em #2F4F4F;
+}
+
+.singleplayer,
+.doubleplayer {
+  cursor: pointer;
+  transition: border 0.2s ease-in-out;
+}
+
+.doubleplayer {
+  cursor: pointer;
+}
+
+.imgBox {
+  width: 0px;
+  transition: width 1s ease-in-out;
+}
+
+.br-0 {
+  border-right: 0;
+}
+
+.bl-0 {
+  border-left: 0;
+}
+
+.bt-0 {
+  border-top: 0;
+}
+
+.bb-0 {
+  border-bottom: 0;
+}
+
+#reset {
+  margin: 0px 23px;
+  padding: 1px 18px;
+  background: #f3e7f9;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Baloo Bhaina 2';
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.line {
+  background-color: #911d91;
+  width: 0vw;
+  height: 3px;
+  position: absolute;
+  transition: width 1s ease-in-out;
+
+  /* animation: lineH 2s 1s linear; */
+}
+
+.vertical-line {
+  background-color: #911d91;
+  width: 3px;
+  height: 0;
+  position: absolute;
+  transition: height 1s ease-in-out;
+}
+
+.cross-line {
+  background-color: #911d91;
+  width: 3px;
+  height: 0vw;
+  position: absolute;
+  transition: height 1s ease-in-out;
+  transform: translate(5vw, 5vw) rotate(60deg);
+}
+
+.button-83 {
+  background-color: transparent;
+  margin-left: 94.2vw;
+  margin-top: 10px;
+  background-image: linear-gradient(to bottom, #fff, #560f56);
+  border: 0 solid #e5e7eb;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  color: #482307;
+  column-gap: 1rem;
+  cursor: pointer;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-size: 34px; */
+  font-weight: 500;
+  line-height: 24px;
+  outline: 2px solid rgba(81, 41, 10, 0.2);
+  padding: 5px 10px;
+  text-align: center;
+  text-transform: none;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  box-shadow: -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+.button-83:active {
+  background-color: #f3f4f6;
+  box-shadow: -1px 2px 5px rgba(81, 41, 10, 0.15), 0px 1px 1px rgba(81, 41, 10, 0.15);
+  transform: translateY(0.125rem);
+}
+
+.button-83:focus {
+  box-shadow: rgba(72, 35, 7, .46) 0 0 0 4px, -6px 8px 10px rgba(81, 41, 10, 0.1), 0px 2px 2px rgba(81, 41, 10, 0.2);
+}
+
+@media screen and (max-width : 950px) {
+  .gameContainer {
+    flex-wrap: wrap;
+  }
+
+  .chooseTurn {
+    display: flex;
+    margin-left: 95px;
+    margin-top: 30px;
+  }
+
+  .turn-x {
+    margin-right: 10px;
+  }
+
+  .button-83 {
+    margin-left: 76.2vw;
+    margin-top: 10px;
+  }
+
+  .gameInfo {
+    margin-top: 34px;
+  }
+
+  .gameInfo h1 {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(3, 20vw);
+  }
+}

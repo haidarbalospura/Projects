@@ -1,0 +1,47 @@
+body >*:not(nav){
+  margin: 0px;
+  padding: 20px 100px;
+}
+h1{
+  text-align: center;
+  text-decoration: underline;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+p{
+  font-size: 18px;
+  text-align:justify;
+}
+.btn{
+  width: 20px;
+  height: 20px;
+  display:inline-block;
+  border: 1px solid gray;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#white{
+  background-color: white;
+}
+#aqua{
+  background-color: aqua;
+}
+#black{
+  background-color: black;
+
+}
+#violet{
+  background-color: violet;
+}
+#color-switcher{
+  text-align: right;
+}
+
+
+@media (max-width: 950px){
+    body >*:not(nav) {
+        padding: 20px 20px;
+    }
+  }
