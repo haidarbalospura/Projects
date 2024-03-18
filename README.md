@@ -2,7 +2,7 @@
 
 ## All Projects
 
-[Projects Site](https://project-by-haidarbalospura.netlify.app)
+[Projects Site](https://project-by-haidarbalospura.netlify.app){:target="\_blank"}
 
 ### HTML, CSS AND JavaScript
 
